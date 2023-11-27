@@ -1,14 +1,10 @@
 "use client";
-import RevLights from "@/components/RevLights";
-import Speed from "@/components/Speed";
-import Laptime from "@/components/Laptime";
-import TotalLaps from "@/components/TotalLaps";
-import Gear from "@/components/Gear";
-import Position from "@/components/Position";
-import ErsStoreEnergy from "@/components/ErsStoreEnergy";
-import TyreInnerTemperature from "@/components/TyreInnerTemperature";
+import SteeringWheelGraphic from "@/components/SteeringWheelGraphic";
+import ThrottleBar from "@/components/ThrottleBar";
+import BrakeBar from "@/components/BrakeBar";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
+import SteeringIcon from "@/components/SteeringIcon";
 
 const socket = io("http://localhost:3001");
 
@@ -56,57 +52,31 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mx-auto py-2">
-      <div className="w-full text-3xl text-center flex flex-col justify-center font-mono">
-        <div className="flex border-[1px] border-zinc-700 justify-center">
-          <RevLights revLightsPercent={telemetry.revLightsPercent} />
-        </div>
-        <div className="grid grid-cols-5">
-          <div className="col-span-1 text-center border-[1px] border-zinc-700">
-            <Speed speedInKPH={telemetry.speed} />
+    <div className="container mx-auto">
+      <div className="w-[48rem] mx-auto">
+        <SteeringWheelGraphic
+          telemetry={telemetry}
+          status={status}
+          session={session}
+          lapData={lapData}
+        />
+      </div>
+
+      <div className="bg-zinc-900 rounded-xl w-fit mx-auto">
+        <p className="text-center text-2xl font-bold uppercase text-zinc-200">
+          Inputs
+        </p>
+        <div className="w-fit p-4 mx-auto text-3xl flex flex-row gap-2">
+          <div className="w-8 h-32">
+            <BrakeBar brake={telemetry.brake} />
           </div>
-          <div className="col-span-3 text-center border-[1px] border-zinc-700 text-6xl">
-            <Laptime laptimeInMS={lapData.currentLapTimeInMS} />
+
+          <div>
+            <SteeringIcon steer={telemetry.steer} />
           </div>
-          <div className="col-span-1 text-center border-[1px] border-zinc-700"></div>
-        </div>
-        <div className="grid border-[1px] border-zinc-700 grid-cols-5 grid-rows-2">
-          <div className="col-span-1 border-[1px] border-zinc-700 row-span-1 col-start-1 row-start-1">
-            <TotalLaps totalLaps={session.totalLaps} />
+          <div className="w-8 h-32">
+            <ThrottleBar throttle={telemetry.throttle} />
           </div>
-          <div className="border-[1px] border-zinc-700 col-span-3 row-span-2 col-start-2 row-start-1 text-9xl">
-            <Gear gear={telemetry.gear} />
-          </div>
-          <div className="border-[1px] border-zinc-700 col-span-1 row-span-1 col-start-5 row-start-1">
-            <Position position={lapData.carPosition} />
-          </div>
-          <div className="border-[1px] border-zinc-700 col-span-1 row-span-1 col-start-1 row-start-2">
-            {telemetry.tyresInnerTemperature && (
-              <>
-                <TyreInnerTemperature
-                  tyreInnerTemperature={telemetry.tyresInnerTemperature[2]}
-                />
-                <TyreInnerTemperature
-                  tyreInnerTemperature={telemetry.tyresInnerTemperature[0]}
-                />
-              </>
-            )}
-          </div>
-          <div className="border-[1px] border-zinc-700 col-span-1 row-span-1 col-start-5 row-start-2">
-            {telemetry.tyresInnerTemperature && (
-              <>
-                <TyreInnerTemperature
-                  tyreInnerTemperature={telemetry.tyresInnerTemperature[3]}
-                />
-                <TyreInnerTemperature
-                  tyreInnerTemperature={telemetry.tyresInnerTemperature[1]}
-                />
-              </>
-            )}
-          </div>
-        </div>
-        <div className="border-[1px] border-zinc-700 text-center">
-          <ErsStoreEnergy ersStoreEnergy={status.ersStoreEnergy} />
         </div>
       </div>
     </div>

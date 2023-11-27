@@ -1,8 +1,6 @@
-export default function RevLights({ revLightsPercent }) {
-  // map the revLightsPercent to an integer between 0 and 15
+export default function RevLights({ revLightsPercent, drsAllowed, drs }) {
   let revLightsOn = Math.floor((revLightsPercent / 100) * 15);
 
-  // create an array of 14 elements
   const revLights = Array.from(Array(15).keys());
 
   revLights[0] = { on: false };
@@ -23,6 +21,19 @@ export default function RevLights({ revLightsPercent }) {
 
   for (let i = 0; i < revLightsOn; i++) {
     revLights[i].on = true;
+  }
+
+  if (drs) {
+    revLights[13].on = true;
+  }
+
+  if (drsAllowed) {
+    revLights[14].on = true;
+  }
+
+  if (!drsAllowed && drs) {
+    revLights[14].on = true;
+    revLights[13].on = true;
   }
 
   return (

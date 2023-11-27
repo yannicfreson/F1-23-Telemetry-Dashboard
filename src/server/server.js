@@ -49,12 +49,12 @@ telemetryClient.start();
 function handleTelemetryData(socket, data) {
   let telemetryData = {};
   let playerCarIndex = data.m_header.m_playerCarIndex;
-  //console.log(data);
   try {
     telemetryData = {
       speed: data.m_carTelemetryData[playerCarIndex].m_speed,
       throttle: data.m_carTelemetryData[playerCarIndex].m_throttle,
       brake: data.m_carTelemetryData[playerCarIndex].m_brake,
+      steer: data.m_carTelemetryData[playerCarIndex].m_steer,
       gear: data.m_carTelemetryData[playerCarIndex].m_gear,
       engineRPM: data.m_carTelemetryData[playerCarIndex].m_engineRPM,
       tyresSurfaceTemperature:
@@ -62,6 +62,8 @@ function handleTelemetryData(socket, data) {
       tyresInnerTemperature:
         data.m_carTelemetryData[playerCarIndex].m_tyresInnerTemperature,
       tyresPressure: data.m_carTelemetryData[playerCarIndex].m_tyresPressure,
+      brakesTemperature:
+        data.m_carTelemetryData[playerCarIndex].m_brakesTemperature,
       drs: data.m_carTelemetryData[playerCarIndex].m_drs,
       revLightsPercent:
         data.m_carTelemetryData[playerCarIndex].m_revLightsPercent,
@@ -90,7 +92,7 @@ function handleStatusData(socket, data) {
       ersDeployMode: data.m_carStatusData[playerCarIndex].m_ersDeployMode,
     };
   } catch {}
-  LOGGING && console.log(statusData);
+  //LOGGING && console.log(statusData);
   socket.emit("statusData", statusData);
 }
 
@@ -107,7 +109,7 @@ function handleSessionData(socket, data) {
       trackLength: data.m_trackLength,
     };
   } catch {}
-  LOGGING && console.log(sessionData);
+  //LOGGING && console.log(sessionData);
   socket.emit("sessionData", sessionData);
 }
 
@@ -125,7 +127,7 @@ function handleLapData(socket, data) {
       carPosition: data.m_lapData[playerCarIndex].m_carPosition,
     };
   } catch {}
-  LOGGING && console.log(lapData);
+  //LOGGING && console.log(lapData);
   socket.emit("lapData", lapData);
 }
 
