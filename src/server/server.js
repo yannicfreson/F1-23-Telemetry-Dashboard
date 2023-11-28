@@ -57,11 +57,17 @@ function handleTelemetryData(socket, data) {
       steer: data.m_carTelemetryData[playerCarIndex].m_steer,
       gear: data.m_carTelemetryData[playerCarIndex].m_gear,
       engineRPM: data.m_carTelemetryData[playerCarIndex].m_engineRPM,
-      tyresSurfaceTemperature:
-        data.m_carTelemetryData[playerCarIndex].m_tyresSurfaceTemperature,
-      tyresInnerTemperature:
-        data.m_carTelemetryData[playerCarIndex].m_tyresInnerTemperature,
-      tyresPressure: data.m_carTelemetryData[playerCarIndex].m_tyresPressure,
+      tyresSurfaceTemperature: data.m_carTelemetryData[playerCarIndex]
+        .m_tyresSurfaceTemperature
+        ? data.m_carTelemetryData[playerCarIndex].m_tyresSurfaceTemperature
+        : [0, 0, 0, 0],
+      tyresInnerTemperature: data.m_carTelemetryData[playerCarIndex]
+        .m_tyresInnerTemperature
+        ? data.m_carTelemetryData[playerCarIndex].m_tyresInnerTemperature
+        : [0, 0, 0, 0],
+      tyresPressure: data.m_carTelemetryData[playerCarIndex].m_tyresPressure
+        ? data.m_carTelemetryData[playerCarIndex].m_tyresPressure
+        : [0, 0, 0, 0],
       brakesTemperature:
         data.m_carTelemetryData[playerCarIndex].m_brakesTemperature,
       drs: data.m_carTelemetryData[playerCarIndex].m_drs,

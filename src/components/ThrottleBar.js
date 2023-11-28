@@ -6,7 +6,7 @@ export default function ThrottleBar({ throttle }) {
   };
   return (
     <div>
-      <div className="bg-green-500 h-32 rounded-lg overflow-hidden w-8">
+      <div className="bg-green-500 h-[21.5rem] rounded-lg overflow-hidden w-8">
         <div
           className="bg-zinc-700 z-10 w-8 text-zinc-950"
           style={barFillStyle}

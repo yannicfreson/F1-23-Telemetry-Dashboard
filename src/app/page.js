@@ -1,10 +1,11 @@
 "use client";
 import SteeringWheelGraphic from "@/components/SteeringWheelGraphic";
-import ThrottleBar from "@/components/ThrottleBar";
-import BrakeBar from "@/components/BrakeBar";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
-import SteeringIcon from "@/components/SteeringIcon";
+import Inputs from "@/components/Inputs";
+import TiresGraphic from "@/components/TiresGraphic";
+import InputThrottle from "@/components/InputThrottle";
+import InputBrake from "@/components/InputBrake";
 
 const socket = io("http://localhost:3001");
 
@@ -52,7 +53,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-4 flex flex-col gap-6">
       <div className="w-[48rem] mx-auto">
         <SteeringWheelGraphic
           telemetry={telemetry}
@@ -62,21 +63,32 @@ export default function Home() {
         />
       </div>
 
-      <div className="bg-zinc-900 rounded-xl w-fit mx-auto">
-        <p className="text-center text-2xl font-bold uppercase text-zinc-200">
-          Inputs
-        </p>
-        <div className="w-fit p-4 mx-auto text-3xl flex flex-row gap-2">
-          <div className="w-8 h-32">
-            <BrakeBar brake={telemetry.brake} />
-          </div>
+      <div className="flex gap-3 -mx-2">
+        <div className="bg-zinc-900 rounded-xl w-fit mx-auto">
+          <InputBrake
+            telemetry={telemetry}
+            status={status}
+            session={session}
+            lapData={lapData}
+          />
+        </div>
 
-          <div>
-            <SteeringIcon steer={telemetry.steer} />
-          </div>
-          <div className="w-8 h-32">
-            <ThrottleBar throttle={telemetry.throttle} />
-          </div>
+        <div className="w-[36rem] mx-auto">
+          <TiresGraphic
+            telemetry={telemetry}
+            status={status}
+            session={session}
+            lapData={lapData}
+          />
+        </div>
+
+        <div className="bg-zinc-900 rounded-xl w-fit mx-auto">
+          <InputThrottle
+            telemetry={telemetry}
+            status={status}
+            session={session}
+            lapData={lapData}
+          />
         </div>
       </div>
     </div>

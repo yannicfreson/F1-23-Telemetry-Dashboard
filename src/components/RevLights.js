@@ -41,77 +41,77 @@ export default function RevLights({ revLightsPercent, drsAllowed, drs }) {
       {revLights[0].on ? (
         <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[1].on ? (
         <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[2].on ? (
         <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[3].on ? (
         <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[4].on ? (
         <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[5].on ? (
         <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[6].on ? (
         <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[7].on ? (
         <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[8].on ? (
         <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[9].on ? (
         <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[10].on ? (
         <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[11].on ? (
         <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[12].on ? (
         <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[13].on ? (
         <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
       {revLights[14].on ? (
         <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-slate-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
       )}
     </div>
   );
