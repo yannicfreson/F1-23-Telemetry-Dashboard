@@ -6,6 +6,7 @@ import Gear from "@/components/Gear";
 import Position from "@/components/Position";
 import ErsStoreEnergy from "@/components/ErsStoreEnergy";
 import TyreInnerTemperature from "@/components/TyreInnerTemperature";
+import EngineRPM from "./EngineRPM";
 
 export default function SteeringWheelGraphic({
   telemetry,
@@ -29,7 +30,9 @@ export default function SteeringWheelGraphic({
         <div className="col-span-3 py-2 text-center border-[1px] border-zinc-700 text-6xl">
           <Laptime laptimeInMS={lapData.currentLapTimeInMS} />
         </div>
-        <div className="col-span-1 text-center border-[1px] border-zinc-700"></div>
+        <div className="col-span-1 text-center border-[1px] border-zinc-700">
+          <EngineRPM rpm={telemetry.engineRPM} />
+        </div>
       </div>
       <div className="grid border-[1px] border-zinc-700 grid-cols-5 grid-rows-2">
         <div className="col-span-1 py-4 text-cyan-300 border-[1px] border-zinc-700 row-span-1 col-start-1 row-start-1">
