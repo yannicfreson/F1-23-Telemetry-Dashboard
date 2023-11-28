@@ -6,7 +6,7 @@ export default function ErsStoreEnergy({ ersStoreEnergy, ersDeployMode }) {
   };
 
   return (
-    <div>
+    <div className="text-zinc-950">
       {ersDeployMode === 3 ? (
         <>
           <p className="-mb-9">OVERTAKE</p>

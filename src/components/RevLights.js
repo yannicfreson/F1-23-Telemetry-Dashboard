@@ -39,79 +39,139 @@ export default function RevLights({ revLightsPercent, drsAllowed, drs }) {
   return (
     <div className="flex justify-between p-2 w-full">
       {revLights[0].on ? (
-        <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-green-500 blur-[1px] p-1 border-[1px] border-green-600 w-10 h-10 rounded-full">
+          <div className="bg-green-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[1].on ? (
-        <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-green-500 blur-[1px] p-1 border-[1px] border-green-600 w-10 h-10 rounded-full">
+          <div className="bg-green-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[2].on ? (
-        <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-green-500 blur-[1px] p-1 border-[1px] border-green-600 w-10 h-10 rounded-full">
+          <div className="bg-green-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[3].on ? (
-        <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-green-500 blur-[1px] p-1 border-[1px] border-green-600 w-10 h-10 rounded-full">
+          <div className="bg-green-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[4].on ? (
-        <div className="bg-green-500 border-[1px] border-green-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-green-500 blur-[1px] p-1 border-[1px] border-green-600 w-10 h-10 rounded-full">
+          <div className="bg-green-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[5].on ? (
-        <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-red-500 blur-[1px] p-1 border-[1px] border-red-600 w-10 h-10 rounded-full">
+          <div className="bg-red-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[6].on ? (
-        <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-red-500 blur-[1px] p-1 border-[1px] border-red-600 w-10 h-10 rounded-full">
+          <div className="bg-red-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[7].on ? (
-        <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-red-500 blur-[1px] p-1 border-[1px] border-red-600 w-10 h-10 rounded-full">
+          <div className="bg-red-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[8].on ? (
-        <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-red-500 blur-[1px] p-1 border-[1px] border-red-600 w-10 h-10 rounded-full">
+          <div className="bg-red-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[9].on ? (
-        <div className="bg-red-500 border-[1px] border-red-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-red-500 blur-[1px] p-1 border-[1px] border-red-600 w-10 h-10 rounded-full">
+          <div className="bg-red-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[10].on ? (
-        <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-purple-500 blur-[1px] p-1 border-[1px] border-purple-600 w-10 h-10 rounded-full">
+          <div className="bg-purple-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[11].on ? (
-        <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-purple-500 blur-[1px] p-1 border-[1px] border-purple-600 w-10 h-10 rounded-full">
+          <div className="bg-purple-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[12].on ? (
-        <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-purple-500 blur-[1px] p-1 border-[1px] border-purple-600 w-10 h-10 rounded-full">
+          <div className="bg-purple-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[13].on ? (
-        <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-purple-500 blur-[1px] p-1 border-[1px] border-purple-600 w-10 h-10 rounded-full">
+          <div className="bg-purple-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
       {revLights[14].on ? (
-        <div className="bg-purple-500 border-[1px] border-purple-600 w-10 h-10 rounded-full"></div>
+        <div className="bg-purple-500 blur-[1px] p-1 border-[1px] border-purple-600 w-10 h-10 rounded-full">
+          <div className="bg-purple-200 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       ) : (
-        <div className="bg-zinc-800 border-[1px] border-zinc-700 w-10 h-10 rounded-full"></div>
+        <div className="bg-zinc-800 p-2 border-[1px] border-zinc-900 w-10 h-10 rounded-full">
+          <div className="bg-zinc-700 blur-[4px] h-full w-full rounded-full"></div>
+        </div>
       )}
     </div>
   );
